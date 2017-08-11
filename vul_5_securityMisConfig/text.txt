@@ -1,0 +1,7 @@
+expose_php=Offft/lampp/etc/httpd.conf
+expose_php=Offre Off
+expose_php=OffProd
+
+
+sudo gedit /opt/lampp/etc/php.ini
+expose_php=on

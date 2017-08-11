@@ -1,0 +1,1 @@
+select emp.first_name, mng.first_name from employess emp inner join employees mng on emp.manager_id = mng.employees_id;

