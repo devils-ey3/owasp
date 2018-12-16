@@ -1,2 +1,5 @@
 # owasp
-I try to explain owasp top 10 2013 vulnerability with possible backend logic. There could have some mistake because i am not a professional. Moreover my english skill in not good because its not mine native language. If you have any query then you can ask me.
+In this project I implement owasp (2013) to 10 vulnerability with counter measure.
+The code is in raw php, so everyone can understand it.
+
+You can watch https://www.youtube.com/watch?v=ay4zusLhAzY this video for explanation of my project.
